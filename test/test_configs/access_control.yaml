@@ -1,0 +1,79 @@
+access_control:
+  disk:
+    override: [read, write] #Force disk to be read and write on all parameters
+
+  cli:
+    default: [read, log_write]
+
+  ble:
+    default: []
+
+  guest:
+    default: []
+
+  admin:
+    override: RW
+
+id_space_shift: 8 
+
+parameters:
+  basic_group:
+    type: group
+    local_id: 0x1
+    id_space_shift: 8 
+
+    access_control:
+      ble: [R, W]
+      disk: { override: [] }
+
+    children:
+      test_variable_A:
+        type: parameter
+        local_id: 0x1
+        primitive: f32
+        description: A test variable
+        default: 0.2
+
+      test_variable_B:
+        type: parameter
+        local_id: 0x2
+        primitive: f32
+        description: A test variable
+        default: 1.23
+        access_control:
+          ble:
+            override: R
+
+      test_variable_small:
+        type: parameter
+        local_id: 0x3
+        primitive: u8
+        description: A small test variable
+        default: 88
+
+  another_group:
+    type: group
+    local_id: 0x2
+    id_space_shift: 8 
+    
+    children:
+      test_variable_A:
+        type: parameter
+        local_id: 0x1
+        primitive: f32
+        description: A test variable
+        default: 0.0
+
+      test_variable_B:
+        type: parameter
+        local_id: 0x2
+        primitive: f32
+        description: A test variable
+        default: 1.23
+
+      test_variable_small:
+        type: parameter
+        local_id: 0x3
+        primitive: u8
+        description: A small test variable
+        default: 88

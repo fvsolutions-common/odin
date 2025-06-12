@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+message odin_proto_parameter {
+  required int32 id=1; 
+  required bytes data=2;
+}
+
+message odin_proto_parameter_collection {
+  repeated odin_proto_parameter parameters=3;
+}

@@ -1,0 +1,20 @@
+id_space_shift: 8
+
+types:
+  vec3:
+    model:
+      x: { type: f32, elements: 10 }
+      y: { type: f32, elements: 2 }
+      z: f32
+
+  position:
+    model:
+      values: { type: vec3, elements: 10 }
+
+parameters:
+  param_complex_type:
+    type: parameter
+    local_id: 0
+    description: A basic float variable
+    primitive: f32
+    default: 1.0

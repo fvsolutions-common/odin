@@ -1,0 +1,14 @@
+config:
+  c_generator:
+    extra_includes:
+      - custom_type.h
+
+access_control: {}
+id_space_shift: 8
+collections:
+  test_collection:
+    children:
+      - i do not exist
+    description: A collection of test parameters
+  
+parameters: {}

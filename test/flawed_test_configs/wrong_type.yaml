@@ -1,0 +1,8 @@
+id_space_shift: 8
+
+parameters:
+  param_u8:
+    type: parameter
+    local_id: 1
+    primitive: abracadabra
+    default: 10

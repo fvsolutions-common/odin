@@ -1,0 +1,33 @@
+access_control: {}
+id_space_shift: 8
+
+
+parameters:
+  test_variable_A:
+    local_id: 1 
+    type: f32
+    description: A test variable
+    default: 0.2
+
+  test_variable_B: 
+    local_id: 0xFF
+    type: f32
+    description: A test variable
+    default: 1.23
+
+  group_1: 
+    local_id: 3
+    id_space_shift: 3 
+    
+    children:
+      test_variable_A: 
+        local_id: 1
+        type: f32
+        description: A test variable
+        default: 0.0
+
+      test_variable_B:
+        local_id: 1
+        type: f32
+        description: A test variable
+        default: 1.23

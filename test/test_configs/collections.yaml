@@ -1,0 +1,119 @@
+config:
+  c_generator:
+    extra_includes:
+      - custom_type.h
+
+access_control: {}
+id_space_shift: 8
+collections:
+  test_collection:
+    children:
+      - param_float
+      - param_float_array
+    description: A collection of test parameters
+    
+types:
+  rgb_color:
+    model:
+      r: u8
+      g: u8
+      b: u8
+
+  vec3:
+    model:
+      x: f32
+      y: f32
+      z: f32
+
+  position:
+    model:
+      angle: vec3
+      pos: vec3
+
+  vec_matrix:
+    model:
+      numbers: { type: f32, elements: 10 }
+      vectors: { type: vec3, elements: 10 }
+
+parameters:
+  param_float:
+    type: parameter
+    local_id: 0
+    description: A basic float variable
+    primitive: f32
+    default: 1.0
+
+  param_float_array:
+    type: array
+    local_id: 2
+    description: A basic float variable
+    primitive: f32
+    default: [1, 2, 3]
+    elements: 10
+
+  basic_int:
+    type: parameter
+    local_id: 3
+    description: A basic float variable
+    primitive: i32
+    default: 10
+
+  color:
+    type: parameter
+    local_id: 10
+    description: A basic float variable
+    primitive: rgb_color
+    default:
+      r: 10
+      g: 50
+      b: 0
+
+  vec3:
+    type: parameter
+    local_id: 12
+    description: A basic float variable
+    primitive: vec3
+    default:
+      x: 1.0
+      y: 2.0
+      z: 3.0
+
+  rot_pos:
+    type: parameter
+    local_id: 13
+    description: A basic float variable
+    primitive: vec_matrix
+    default:
+      numbers: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
+      vectors:
+        - { x: 1.0, y: 2.0, z: 3.0 }
+        - { x: 4.0, y: 5.0, z: 6.0 }
+        - { x: 7.0, y: 8.0, z: 9.0 }
+        - { x: 10.0, y: 11.0, z: 12.0, t: 13.0 }
+        - { x: 13.0, y: 14.0, z: 15.0 }
+        - { x: 16.0, y: 17.0, z: 18.0 }
+        - { x: 19.0, y: 20.0, z: 21.0 }
+        - { x: 22.0, y: 23.0, z: 24.0 }
+        - { x: 25.0, y: 26.0, z: 27.0 }
+        - { x: 28.0, y: 29.0, z: 30.0 }
+
+  # basic_group:
+  #   type: group
+  #   local_id: 2
+  #   description: A basic group variable
+  #   id_space_shift: 8
+
+  #   children:
+  #     basic_float:
+  #       type: parameter
+  #       local_id: 0
+  #       description: A basic float variable
+  #       primitive: f32
+  #       default: 1.0
+
+  #     basic_int:
+  #       type: parameter
+  #       local_id: 1
+  #       description: A basic float variable
+  #       primitive: i32
+  #       default: 10

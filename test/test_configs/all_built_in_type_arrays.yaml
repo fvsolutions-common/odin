@@ -1,0 +1,87 @@
+id_space_shift: 8
+
+parameters:
+  param_u8:
+    type: array
+    local_id: 1
+    primitive: u8
+    default: [1, 2, 3]
+    elements: 10
+
+  param_i8:
+    type: array
+    local_id: 2
+    primitive: i8
+    default: [1, 2, 3]
+    elements: 10
+
+  param_u16:
+    type: array
+    local_id: 3
+    primitive: u16
+    default: [1, 2, 3]
+    elements: 10
+
+  param_i16:
+    type: array
+    local_id: 4
+    primitive: i16
+    default: [1, 2, 3]
+    elements: 10
+
+  param_u32:
+    type: array
+    local_id: 5
+    primitive: u32
+    default: [1, 2, 3]
+    elements: 10
+
+  param_i32:
+    type: array
+    local_id: 6
+    primitive: i32
+    default: [1, 2, 3]
+    elements: 10
+
+  param_u64:
+    type: array
+    local_id: 7
+    primitive: u64
+    default: [1, 2, 3]
+    elements: 10
+  
+  param_i64:
+    type: array
+    local_id: 8
+    primitive: i64
+    default: [1, 2, 3]
+    elements: 10
+
+  param_f32:  
+    type: array
+    local_id: 9
+    primitive: f32
+    default: [1.0, 2.0, 3.0]
+    elements: 10
+
+  param_f64:
+    type: array
+    local_id: 10
+    primitive: f64
+    default: [1.0, 2.0, 3.0]
+    elements: 10
+
+  param_bool:
+    type: array
+    local_id: 11
+    primitive: bool
+    default: [true, false, 1, 0]
+    elements: 10
+
+  param_char:
+    type: array
+    local_id: 12
+    primitive: char
+    default: "test"
+    elements: 10
+

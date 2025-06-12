@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/examples/basic/basic_example.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Test: Base config",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test/test_cli.py",
+            "args": [
+                "generate",
+                "test/test_configs/config.yaml",
+                "test/generated",
+                "--advanced"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Test: Base all configs",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test/test_all_config.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python Debugger: TEST",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test/test_process_configs.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python Debugger: TEST DEMO",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test/test_demo.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        }
+    ]
+}

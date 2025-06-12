@@ -1,0 +1,1 @@
+The config in this contain issues, they are used to test the validation and error handling of the code generation tool.

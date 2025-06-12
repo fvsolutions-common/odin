@@ -1,0 +1,13 @@
+**.pyc
+build/
+.cache/
+**.profraw
+
+test/configs/*.c
+test/configs/*.out
+**.o
+.coverage
+**.pdf
+test/demo
+test/test_configs/data.yaml
+schema.json

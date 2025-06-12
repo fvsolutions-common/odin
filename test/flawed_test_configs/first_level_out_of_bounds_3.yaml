@@ -1,0 +1,17 @@
+access_control: {}
+id_space_shift: 8
+
+parameters:
+  test_variable_A:
+    primitive: f32
+    type: parameter
+    local_id: 0x1
+    description: A test variable
+    default: 0.0
+
+  test_variable_B:
+    primitive: f32
+    type: parameter
+    local_id: 0xFFFFF
+    description: A test variable
+    default: 1.23

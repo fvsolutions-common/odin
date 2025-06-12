@@ -1,0 +1,39 @@
+access_control: {}
+id_space_shift: 8
+
+
+parameters:
+  test_variable_A:
+    local_id: 1 
+    type: f32
+    description: A test variable
+    default: 0.2
+
+  test_variable_B: 
+    local_id: 0xFF
+    type: f32
+    description: A test variable
+    default: 1.23
+
+  group_1: 
+    local_id: 3
+    id_space_shift: 3 #Shifts the next subgroup to the left by 8 bits
+
+    children:
+      test_variable_A: 
+        local_id: 1
+        type: f32
+        description: A test variable
+        default: 0.0
+
+      test_variable_B:
+        local_id: 2
+        type: f32
+        description: A test variable
+        default: 1.23
+
+      test_variable_small:
+        local_id: 12
+        type: u8
+        description: A small test variable
+        default: 88

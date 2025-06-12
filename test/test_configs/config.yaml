@@ -1,0 +1,13 @@
+id_space_shift: 8
+
+types:
+  generation_test:
+    model:
+      val1: { type: f32, elements: 9, default: [1, 2, 3, 4, 5, 6, 7, 8, 9] }
+      val2: { type: f32, elements: 3, default: [1, 2, 3] }
+
+parameters:
+  param_u8:
+    type: parameter
+    local_id: 1
+    primitive: generation_test

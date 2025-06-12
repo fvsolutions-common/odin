@@ -1,0 +1,58 @@
+id_space_shift: 8
+
+types:
+  simple_type:
+    model:
+      data: f32
+
+  multi_type:
+    model:
+      a: f32
+      b: i32
+      c: u32
+
+  simple_type_expanded:
+    model:
+      data: { type: f32 }
+
+  simple_type_expanded_with_default:
+    model:
+      data: { type: f32, default: 1.0 }
+
+  multi_type_array:
+    model:
+      my_array: { type: f32, elements: 10 }
+
+  referenced:
+    model:
+      simple_type: simple_type
+      multi_type: multi_type
+      simple_type_expanded: simple_type_expanded
+      simple_type_expanded_with_default: simple_type_expanded_with_default
+      multi_type_array: multi_type_array
+
+  referenced_array:
+    model:
+      simple_type: { type: simple_type, elements: 10 }
+      multi_type: { type: multi_type, elements: 10 }
+      simple_type_expanded: { type: simple_type_expanded, elements: 10 }
+      simple_type_expanded_with_default:
+        { type: simple_type_expanded_with_default, elements: 10 }
+      multi_type_array: { type: multi_type_array, elements: 10 }
+      referenced: { type: referenced, elements: 10 }
+
+  test_model:
+    model:
+      multi_type_array: { type: multi_type_array, elements: 6 }
+
+  test_new_model:
+    model:
+      multi_type_array: { type: test_model, elements: 8 }
+      data: f32
+
+parameters:
+  param_u8:
+    type: parameter
+    local_id: 1
+    primitive: u8
+    default: 1
